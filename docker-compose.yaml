@@ -1,0 +1,12 @@
+services:
+    app:
+        container_name: frankenphp
+        build:
+            context: ./
+            dockerfile: ./docker/Dockerfile
+        restart: always
+        ports:
+            - 80:80
+        volumes:
+            - ./app:/app/public
+        tty: true
