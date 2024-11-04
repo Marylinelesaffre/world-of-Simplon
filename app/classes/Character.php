@@ -5,6 +5,7 @@ class Character{
     private string $name;
     private int $health; //santé
     private int $attack;
+    
 
     // Constructor initialise l'objet
     public function __construct($param1 ='Nom', $param2 = 200 , $param3 = 20) {
@@ -43,13 +44,14 @@ class Character{
         echo 'Nom : '.$this->getName().'<br>';
         echo 'Santé : '.$this->getHealth().'<br>';
         echo 'Attaque : '.$this->getAttack().'<br>';
-        echo '<hr>';
+        
 
     }
 
     public function hit($target){
         $target->getHealth() - $this->getAttack();
         $target->setHealth($target->getHealth() - $this->getAttack());
+        echo '<hr>';
 
     }
 }
