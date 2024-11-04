@@ -4,12 +4,13 @@ class Character{
     // attributes
     private string $name;
     private int $health; //santé
-    
+    private int $attack;
 
     // Constructor initialise l'objet
-    public function __construct($param1 ='Nom', $param2 = 200) {
+    public function __construct($param1 ='Nom', $param2 = 200 , $param3 = 20) {
         $this->setName($param1);
-        $this->setHealth ($param2);
+        $this->setHealth($param2);
+        $this->setAttack($param3);
     }
     // Getters
      public function getName(){
@@ -17,6 +18,9 @@ class Character{
      }
      public function getHealth(){
         return $this->health;
+     }
+     public function getAttack(){
+        return $this->attack;
      }
 
     // Setters
@@ -29,11 +33,23 @@ class Character{
 
     }
 
+    public function setAttack($param3){
+        $this->attack = $param3;
+
+    }
+
     // Methodes
     public function describe(){ //this=faire appel a mon objet(Character)
-        echo $this->getName().'<br>';
-        echo $this->getHealth();
+        echo 'Nom : '.$this->getName().'<br>';
+        echo 'Santé : '.$this->getHealth().'<br>';
+        echo 'Attaque : '.$this->getAttack().'<br>';
         echo '<hr>';
+
+    }
+
+    public function hit($target){
+        $target->getHealth() - $this->getAttack();
+        $target->setHealth($target->getHealth() - $this->getAttack());
 
     }
 }
