@@ -36,20 +36,21 @@ include_once 'classes/Wizard.php';
 //  $charactere02->setHealth(60);
 //  echo $charactere02->getHealth();
 
-$Hulk = new Warrior ('hulk', 200, 50, 'Sabre laser', 'bouclier');
-$Hulk->describe();
+$Warrior01 = new Warrior('Elden', 200, 80, 'Sabre laser', 'bouclier');
+$Warrior01->describe();
 
-$Magicien = new Wizard ('Magicien' , 180, 30, 'baton de magie');
+$Magicien = new Wizard ('Rannala' , 180, 30, 'baton de magie');
 $Magicien->describe();
 
- $Magicien->hit($Hulk);
- echo $Hulk->getHealth();
+//  $Magicien->hit($Hulk);
+//  echo $Hulk->getHealth();
 
- $Magicien->hit($Hulk);
- echo $Hulk->getHealth();
+ $nombreAttack = 5;
 
-
- 
+for ($i = 0; $i <$nombreAttack; $i++) {
+    $Magicien->hit($Warrior01);
+    echo "Santé du guerrier après l'attaque : " . $Warrior01->getHealth();
+}
 
 
 

@@ -5,8 +5,8 @@ class Character{
     private string $name;
     private int $health; //santé
     private int $attack;
-    
 
+    
     // Constructor initialise l'objet
     public function __construct($param1 ='Nom', $param2 = 200 , $param3 = 20) {
         $this->setName($param1);
