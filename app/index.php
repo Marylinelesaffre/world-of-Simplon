@@ -41,7 +41,7 @@ include_once 'classes/Archer.php';
 $Warrior01 = new Warrior('Elden', 200, 50, 'Sabre laser', 'bouclier');
 $Warrior01->describe();
 
-$Magicien = new Wizard ('Rannala' , 180, 30, 'baton de magie');
+$Magicien = new Wizard ('Rannala', 180, 30, 'baton de magie');
 $Magicien->describe();
 
 //   $Magicien->hit($Warrior01);
@@ -53,12 +53,13 @@ $Magicien->describe();
 
 $nombreAttack = 8;
 
-for ($i = 0; $i <$nombreAttack; $i++) {
+for ($i = 0; $i <$nombreAttack; $i++) 
+{
     $Magicien->hit($Warrior01);
     echo "Santé du guerrier après l'attaque : " . $Warrior01->getHealth();
     echo '<hr>';
 }
 
-$Archer = new Archer ('Lara' , 130, 50, 'arc');
+$Archer = new Archer ('Lara', 130, 50, 'arc');
 $Archer->describe();
 
