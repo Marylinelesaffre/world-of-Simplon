@@ -8,7 +8,7 @@ class Character{
 
     
     // Constructor initialise l'objet
-    public function __construct($param1 ='Nom', $param2 = 200 , $param3 = 20) {
+    public function __construct($param1, $param2  , $param3) {
         $this->setName($param1);
         $this->setHealth($param2);
         $this->setAttack($param3);
@@ -45,7 +45,6 @@ class Character{
         echo 'Santé : '.$this->getHealth().'<br>';
         echo 'Attaque : '.$this->getAttack().'<br>';
         
-
     }
 
     public function hit($target){

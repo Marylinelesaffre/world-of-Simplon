@@ -8,7 +8,8 @@ class Wizard extends Character {
      const JOB = "magicienne";
 
     // Constructeur initialise l'objet
-    public function __construct($name = 'Magicien', $health = 180, $attack = 30, $staff = 'Bâton de magie') {
+     public function __construct($name, $health , $attack , $staff) {
+        //ne pas oublier de mettre dans le même ordre que dans l'index
         parent::__construct($name, $health, $attack); // Appel au constructeur parent
         $this->setStaff($staff);
     }
@@ -27,7 +28,7 @@ class Wizard extends Character {
     public function describe() {
         parent::describe(); // Appeler la méthode describe de la classe parente
         echo 'équiper de  : ' . $this->getStaff() . '<br>';
-        echo 'catégorie : ' . Wizard::JOB;
-        
+        echo 'catégorie : ' . Wizard::JOB . '<br';
+        echo '<hr>';
     }
 }
